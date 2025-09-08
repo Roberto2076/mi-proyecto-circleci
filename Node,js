@@ -1,0 +1,3 @@
+mkdir mi-proyecto-circleci
+cd mi-proyecto-circleci
+npm init -y
