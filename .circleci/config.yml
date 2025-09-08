@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14  # Entorno con Node.js
+    steps:
+      - checkout  # Descarga el código del repo
+      - run: npm install
+      - run: npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
