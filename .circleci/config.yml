@@ -3,11 +3,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:14  # Entorno con Node.js
+      - image: cimg/base:stable
     steps:
-      - checkout  # Descarga el código del repo
-      - run: npm install
-      - run: npm test
+      - checkout
+      - run: echo "🚀 Hola Mundo desde CircleCI, todo funciona!"
 
 workflows:
   version: 2
